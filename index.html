@@ -1,29 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Budget App</title>
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css" />
 
     <!-- Icons CSS -->
-    <link rel="stylesheet" href="icons/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="icons/style.css" />
+  </head>
+  <body>
     <!--  -->
 
     <!-- Container Class -->
     <div class="container">
-        <div class="holder">
-            <div class="holder-head">
-                <h1><i class="icon_briefcase_alt"></i> &nbsp; Budget App</h1>
-            </div>
-            <div class="holder-body">
-                This is where Some of the Calculations will go
-            </div>
+      <div class="holder">
+        <div class="holder-head">
+          <h1><i class="icon_briefcase_alt"></i> &nbsp; Budget App</h1>
         </div>
+        <div class="holder-body">
+          <div class="menu">
+            <button class="menu-btn" data-target="menu1"><i class="icon_currency_alt"></i> &nbsp; Income</button>
+            <button class="menu-btn" data-target="menu2"><i class="icon_wallet_alt"></i> &nbsp; Expenses</button>
+            <button class="menu-btn" data-target="menu3"><i class="icon_piechart"></i> &nbsp; Status</button>
+          </div>
+
+          <!-- Income Menu -->
+
+          <div class="card menu1">
+            <div class="card-body">
+              <div class="badge">
+                <i class="icon_currency_alt"></i> &nbsp;
+                <p id="income-amount">1000</p>
+              </div>
+              <div class="incomes">
+                <!-- <ul>
+                    <li>100</li>
+                    <li>200</li>
+                </ul> -->
+              </div>
+            </div>
+            <div class="card-footer">
+              <input type="number" id="income-input" placeholder="Enter Income" />
+              <button type="submit" id="add-income-btn"><i class="icon_plus_alt2"></i></button>
+            </div>
+          </div>
+
+          <!-- Expenses Menu -->
+
+          <div class="card menu2">
+            <div class="card-body">
+              <div class="badge">
+                <i class="icon_wallet_alt"></i> &nbsp;
+                <p id="income-amount">1000</p>
+              </div>
+              <div class="expenses">
+                <ul>
+                    <li>100</li>
+                    <li>200</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer">
+              <input type="number" id="expense-input" placeholder="Enter Expense" />
+              <button type="submit"><i class="icon_plus_alt2"></i></button>
+            </div>
+          </div>
+
+          <!-- Status Menu -->
+
+          <div class="card menu3">
+            <div class="card-body">
+              <div class="badge">
+                <i class="icon_piechart"></i> &nbsp;
+                <p id="income-amount">1000</p>
+              </div>
+              <div class="row">
+                <div class="badge">
+                    <i class="icon_currency_alt"></i> &nbsp;
+                    <p id="income-amount">1000</p>
+                  </div>
+                  <div class="badge">
+                    <i class="icon_wallet_alt"></i> &nbsp;
+                    <p id="income-amount">1000</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
     </div>
-</body>
+  </body>
+  <script src="js/app.js"></script>
 </html>

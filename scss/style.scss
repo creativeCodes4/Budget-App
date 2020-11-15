@@ -1,39 +1,183 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    background: linear-gradient(top,aliceblue,#f1f1ff);
-    height: 100vh;
-    font-family: 'Caviar Dreams';
+body {
+  background: linear-gradient(to top, aliceblue, #f1f1ff);
+  height: 100vh;
+  font-family: 'Caviar Dreams';
 }
 
-.container{
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.holder {
+  width: 300px;
+  height: 50vh;
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 15px;
+
+  &-head {
+    background-color: rgb(169, 126, 238);
+    padding: 10px;
+    border-radius: 10px;
+    height: 8%;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
+    justify-content: center;
+    box-shadow: 0px 0px 18px 1px #ccc;
 
-.holder{
-    width: 300px;
-    height: 50vh;
-    margin-top: 50px;
-    background-color: white;
-    border-radius: 15px;
-
-    &-head{
-        background-color: rgb(169, 126, 238);
-        padding: 10px;
-        border-radius: 10px;
-        height: 8%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        h1{
-            font-size: large;
-            color: whitesmoke;
-        }
+    h1 {
+      font-size: large;
+      color: whitesmoke;
     }
+  }
+
+  &-body {
+    background-color: #f1f1ff;
+    padding: 10px;
+    height: 90%;
+    .menu {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        outline: none;
+        border: none;
+        height: 55px;
+        padding: 0px 15px;
+        width: auto;
+        cursor: pointer;
+        background-color: white;
+        border-bottom: 3px solid white;
+        color: rgb(126, 69, 218);
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        font-size: 1rem;
+      }
+      button:hover {
+        border-bottom: 3px solid rgb(126, 69, 218);
+      }
+      .active-btn{
+        border-bottom: 3px solid rgb(126, 69, 218);
+      }
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      &-body {
+        height: 90%;
+        margin-top: 15px;
+
+        .badge {
+          background-color: white;
+          margin-top: 5px;
+          padding: 25px 0px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding-left: 25px;
+          border-left: 3px solid rgb(169, 126, 238);
+
+          i {
+            font-size: 2rem;
+            color: rgb(126, 69, 218);
+          }
+
+          p {
+            font-weight: bold;
+          }
+        }
+
+        .row {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 1px;
+          .badge {
+            width: 39%;
+            border: none;
+            border-radius: 5px;
+          }
+        }
+
+        .incomes {
+          padding: 10px;
+          height: 200px;
+          ul {
+            list-style: none;
+            li {
+              background-color: white;
+              margin-top: 5px;
+              padding: 10px;
+            }
+          }
+        }
+        .expenses {
+          padding: 10px;
+          height: 200px;
+          ul {
+            list-style: none;
+            li {
+              background-color: white;
+              margin-top: 5px;
+              padding: 10px;
+            }
+          }
+        }
+        .status {
+          padding: 10px;
+          height: 200px;
+          ul {
+            list-style: none;
+            li {
+              background-color: white;
+              margin-top: 5px;
+              padding: 10px;
+            }
+          }
+        }
+      }
+      &-footer {
+        height: 10%;
+
+        input {
+          width: 80%;
+          height: 35px;
+          outline: none;
+          border: none;
+          padding-left: 10px;
+        }
+        input::placeholder {
+          color: #333;
+        }
+        button {
+          width: 35px;
+          height: 35px;
+          outline: none;
+          border: none;
+          background-color: rgb(169, 126, 238);
+          color: white;
+          border-radius: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+    .menu1{
+        display: none;
+    }
+
+    .menu2{
+        display: none;
+    }
+    .menu3{
+        display: none;
+    }
+  }
 }
