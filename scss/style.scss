@@ -2,3 +2,38 @@
     padding: 0;
     margin: 0;
 }
+
+body{
+    background: linear-gradient(top,aliceblue,#f1f1ff);
+    height: 100vh;
+    font-family: 'Caviar Dreams';
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.holder{
+    width: 300px;
+    height: 50vh;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 15px;
+
+    &-head{
+        background-color: rgb(169, 126, 238);
+        padding: 10px;
+        border-radius: 10px;
+        height: 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            font-size: large;
+            color: whitesmoke;
+        }
+    }
+}
