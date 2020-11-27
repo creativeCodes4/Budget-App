@@ -46,7 +46,12 @@ cards[0].style.display = 'block';
 menuButtons.forEach((button, index) => {
   button.addEventListener('click', (event) => {
     let btn = button.getAttribute('data-target');
+    // menuButtons.borderBottom = '3px solid white';
+    // menuButtons.borderBottom = '3px solid rgb(126, 69, 218)';
+    // event.target.style.backgroundColor = 'rgb(126, 69, 218)';
+    // console.log(index);
     // console.log(btn);
+    // console.log(index);
     cards.forEach((card) => {
       if (card.classList.contains(btn)) {
         card.style.display = 'block';
