@@ -124,6 +124,9 @@ body {
           height: 200px;
           ul {
             list-style: none;
+            height: 130px;
+            overflow-y: scroll;
+            overflow-x: hidden;
             li {
               background-color: white;
               margin-top: 5px;
@@ -181,3 +184,5 @@ body {
     }
   }
 }
+
+@import 'animation';
