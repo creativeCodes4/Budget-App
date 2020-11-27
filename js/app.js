@@ -20,9 +20,22 @@ const expenseInput = document.querySelector('#expense-input');
 
 const expenseAmount = document.querySelector('#expense-amount');
 
-// Arrays to be used...
+const statusIncomeAmount = document.querySelector('#status-income-amount');
 
-let income;
+const statusExpenseAmount = document.querySelector('#status-expense-amount');
+
+const statusAmount = document.querySelector('#status-amount');
+
+const statusIcon = document.querySelector('#status-icon');
+
+
+
+// Variables & Array to be used...
+
+let income = 0;
+let budget = 0;
+let totalExpenses = 0;
+let status = 0;
 let expensesArray = [];
 
 // menuButtons[0].style.borderBottom = '3px solid rgb(126, 69, 218)';
@@ -54,6 +67,7 @@ addIncomeButton.addEventListener('click', () => {
   income = newIncomeValue;
   incomeAmount.textContent = income;
   incomeInput.value = '';
+  updateStatus();
 });
 
 
@@ -66,6 +80,7 @@ addExpenseButton.addEventListener('click', () => {
   expensesArray.push(expense);
   expenseInput.value = '';
   showExpenses();
+  updateStatus();
 });
 
 function showExpenses(){
@@ -74,8 +89,11 @@ function showExpenses(){
   // Creating new UL and Li elements...
 
   const expenseUl = document.createElement('ul');
+
   expensesClass.innerHTML = '';
-  // expenseUl.innerHTML = '';
+
+  // Looping over all items to add them to the list as well as getting the total...
+
   expensesArray.forEach( (item) => {
     expenseUl.innerHTML += `
       <li>${item}</li>
@@ -83,6 +101,32 @@ function showExpenses(){
     total += parseFloat(item);
     expensesClass.appendChild(expenseUl);
   });
+
+  // Storing The Total for later use...
+
+  totalExpenses = total;
+
+  // Updating the Expenses Total...
+
   expenseAmount.textContent = total;
 
 }
+
+
+function updateStatus() {
+  status = income - totalExpenses;
+  statusExpenseAmount.textContent = totalExpenses;
+  statusIncomeAmount.textContent = income;
+  statusAmount.textContent = status;
+
+  // Styling the Status if the budget is lower than the Expenses...
+
+  if (status < 0) {
+    statusIcon.style.color = 'rgb(190, 40, 85)';
+  }
+  else{
+    statusIcon.style.color = 'rgb(126, 69, 218)';
+  }
+
+}
+
