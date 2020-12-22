@@ -16,3 +16,4 @@
 1. Track your progress of the outgoes
 1. Plan for the future based on the had balance
 1. Prepare for the comming events
+1. Preapre yourself for Christmas!
